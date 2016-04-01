@@ -1,0 +1,9 @@
+#property file defining the components information
+component.name=Topcoder Cache Client
+component.distfilename=topcoder_cache_client
+component.package=com.topcoder.web.common.cache
+component.packagedir=com/topcoder/web/common/cache
+component.version.major=1
+component.version.minor=0
+component.version.micro=0
+component.version.build=1
