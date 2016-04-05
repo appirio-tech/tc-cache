@@ -1,6 +1,7 @@
 package com.topcoder.web.common.cache.address.dist;
 
 import com.topcoder.shared.dataAccess.RequestInt;
+import com.topcoder.web.common.cache.MaxAge;
 import com.topcoder.web.common.cache.address.CacheAddress;
 
 import java.util.Map;
@@ -17,6 +18,10 @@ public class RequestAddress implements CacheAddress {
 
     public RequestAddress(RequestInt request) {
         key = parseKey(request);
+    }
+    
+    public RequestAddress(RequestInt request, MaxAge maxAge) {
+    	this(request);
     }
 
 

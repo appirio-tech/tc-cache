@@ -1,5 +1,7 @@
 package com.topcoder.web.common.cache.address;
 
+import java.lang.reflect.InvocationTargetException;
+
 import com.topcoder.security.TCSubject;
 import com.topcoder.shared.dataAccess.RequestInt;
 import com.topcoder.shared.util.TCResourceBundle;
@@ -16,38 +18,64 @@ public class AddressFactory {
     // between the different cache implementations
 
     private static final TCResourceBundle bundle = new TCResourceBundle("cache");
-    private static final boolean isJbossCache = JbossCacheClient.class.getName().equals(bundle.getProperty("cache_client_class"));
+    
+    private static final String JBOSS_REQUEST_CACHE_ADDRESS_CLASS = com.topcoder.web.common.cache.address.jboss.RequestAddress.class.getName();
+    private static final String JBOSS_TC_SUBJECT_CACHE_ADDRESS_CLASS = com.topcoder.web.common.cache.address.jboss.TCSubjectAddress.class.getName();
+    
+    private static Class getCacheAddressClass(boolean tcSubjectAddress) {
+    	String cacheAddressClazz = tcSubjectAddress ? 
+    			bundle.getProperty("tc_subject_cache_address_class", JBOSS_TC_SUBJECT_CACHE_ADDRESS_CLASS) :
+    			bundle.getProperty("request_cache_address_class", JBOSS_REQUEST_CACHE_ADDRESS_CLASS);
+    	
+    	try {
+			return Class.forName(cacheAddressClazz);
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException(e);
+		}
 
+    }
+    
     public static CacheAddress create(RequestInt request) {
-        if (isJbossCache) {
-            return new com.topcoder.web.common.cache.address.jboss.RequestAddress(request);
-        } else {
-            return new com.topcoder.web.common.cache.address.dist.RequestAddress(request);
-        }
+    	Class cacheAddressClazz = getCacheAddressClass(false);
+    	
+    	try {
+			return (CacheAddress) cacheAddressClazz.getConstructor(RequestInt.class).newInstance(request);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+    	
     }
 
     public static CacheAddress create(RequestInt request, MaxAge maxAge) {
-        if (isJbossCache) {
-            return new com.topcoder.web.common.cache.address.jboss.RequestAddress(request, maxAge);
-        } else {
-            return new com.topcoder.web.common.cache.address.dist.RequestAddress(request);
-        }
+    	
+    	Class cacheAddressClazz = getCacheAddressClass(false);
+    	
+    	try {
+			return (CacheAddress) cacheAddressClazz.getConstructor(RequestInt.class, MaxAge.class).newInstance(request, maxAge);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
     }
 
     public static CacheAddress create(TCSubject subject, String dataSource) {
-        if (isJbossCache) {
-            return new com.topcoder.web.common.cache.address.jboss.TCSubjectAddress(subject, dataSource);
-        } else {
-            return new com.topcoder.web.common.cache.address.dist.TCSubjectAddress(subject, dataSource);
-        }
+    	Class cacheAddressClazz = getCacheAddressClass(true);
+    	
+    	try {
+			return (CacheAddress) cacheAddressClazz.getConstructor(TCSubject.class, String.class).newInstance(subject, dataSource);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
     }
 
     public static CacheAddress create(TCSubject subject, String dataSource, MaxAge maxAge) {
-        if (isJbossCache) {
-            return new com.topcoder.web.common.cache.address.jboss.TCSubjectAddress(subject, dataSource, maxAge);
-        } else {
-            return new com.topcoder.web.common.cache.address.dist.TCSubjectAddress(subject, dataSource);
-        }
+    	
+    	Class cacheAddressClazz = getCacheAddressClass(true);
+    	
+    	try {
+			return (CacheAddress) cacheAddressClazz.getConstructor(TCSubject.class, String.class, MaxAge.class).newInstance(subject, dataSource, maxAge);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
     }
 
 }

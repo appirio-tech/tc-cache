@@ -1,6 +1,7 @@
 package com.topcoder.web.common.cache.address.dist;
 
 import com.topcoder.security.TCSubject;
+import com.topcoder.web.common.cache.MaxAge;
 import com.topcoder.web.common.cache.address.CacheAddress;
 
 /**
@@ -17,6 +18,10 @@ public class TCSubjectAddress implements CacheAddress {
 
     public TCSubjectAddress(TCSubject sub, String dataSource) {
         this.key = "subject:" + (dataSource == null ? "" : dataSource) + sub.getUserId();
+    }
+    
+    public TCSubjectAddress(TCSubject sub, String dataSource, MaxAge maxAge) {
+    	this(sub, dataSource);
     }
 
     public String getKey() {

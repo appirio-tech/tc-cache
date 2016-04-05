@@ -9,12 +9,15 @@ import com.topcoder.shared.util.TCResourceBundle;
  */
 public class CacheClientFactory {
 
-    private static TCResourceBundle b = new TCResourceBundle("cache");
+    private static TCResourceBundle bundle = new TCResourceBundle("cache");
+    
+    private static final String JBOSS_CACHE_CLIENT = JbossCacheClient.class.getName();
 
     public static CacheClient create() {
+    	String cacheClientClazz = bundle.getProperty("cache_client_class", JBOSS_CACHE_CLIENT);
+
         try {
-            return (CacheClient)Class.forName(b.getProperty("cache_client_class",
-                    JbossCacheClient.class.getName())).newInstance();
+        	return (CacheClient) Class.forName(cacheClientClazz).newInstance();
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IllegalAccessException e) {
