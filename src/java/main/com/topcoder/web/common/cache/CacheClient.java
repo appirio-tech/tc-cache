@@ -1,11 +1,16 @@
+/*
+ * Copyright (C) 2016 TopCoder Inc., All rights reserved.
+ */
 package com.topcoder.web.common.cache;
 
 import com.topcoder.web.common.cache.address.CacheAddress;
 
 /**
- * @author dok
- * @version $Revision: 60790 $ Date: 2005/01/01 00:00:00
- *          Create Date: Apr 30, 2007
+ * Changed in v1.1
+ * - Added a close method to release resources.
+ * 
+ * @author dok, TCSDEVELOPER
+ * @version 1.1
  */
 public interface CacheClient {
     /**
@@ -74,6 +79,11 @@ public interface CacheClient {
      * @throws TCCacheException if there is a problem
      */
     public void clearCache() throws TCCacheException;
+    
+    /**
+     * Close the cache client
+     */
+    public void close();
 
 
 }

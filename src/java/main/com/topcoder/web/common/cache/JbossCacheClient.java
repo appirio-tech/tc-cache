@@ -1,3 +1,6 @@
+/*
+ * Copyright (C) 2016 TopCoder Inc., All rights reserved.
+ */
 package com.topcoder.web.common.cache;
 
 import com.topcoder.shared.util.TCResourceBundle;
@@ -11,9 +14,12 @@ import javax.naming.NamingException;
 import java.util.Set;
 
 /**
- * @author dok
- * @version $Revision: 60688 $ Date: 2005/01/01 00:00:00
- *          Create Date: Apr 30, 2007
+ * Changed in v1.1
+ * - Added a close method to release resources.
+ * 
+ * @author dok, TCSDEVELOPER
+ * @version 1.1
+ * @since 1.0
  */
 public class JbossCacheClient implements CacheClient {
 
@@ -117,6 +123,11 @@ public class JbossCacheClient implements CacheClient {
             throw new TCCacheException(e);
         }
     }
-
-
+    
+    /**
+     * Close the cache client
+     */
+    public void close() {
+        // do nothing
+    }
 }

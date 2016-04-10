@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="skyhits-MacBook-Pro.local" name="com.topcoder.web.common.cache.redis.RedisCacheClientEmbeddedRedisTest" skipped="0" tests="9" time="4.607" timestamp="2016-04-10T13:47:51">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="package" value="com.topcoder.web.common.cache" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="manifest_file_path" value="build/dist/tc_cache-1.0.0/META-INF/" />
+    <property name="verbose" value="no" />
+    <property name="os.name" value="Mac OS X" />
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/classes" />
+    <property name="user.country.format" value="CN" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.home" value="/Users/skyhit/apache-ant-1.9.4" />
+    <property name="java.runtime.version" value="1.8.0_25-b17" />
+    <property name="component_path" value="tc_cache/1.0.0" />
+    <property name="component.version.micro" value="0" />
+    <property name="user.name" value="skyhit" />
+    <property name="manifest_file" value="build/dist/tc_cache-1.0.0/META-INF//MANIFEST.MF" />
+    <property name="debug" value="off" />
+    <property name="component.version.major" value="1" />
+    <property name="component_version" value="1.0.0" />
+    <property name="component.packagedir" value="com/topcoder/web/common/cache" />
+    <property name="user.language" value="en" />
+    <property name="javadoc.locale" value="en_US" />
+    <property name="testfiles_dir" value="test_files" />
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib" />
+    <property name="ant.project.default-target" value="dist" />
+    <property name="srcdir" value="src" />
+    <property name="ant.project.name" value="Topcoder Cache client" />
+    <property name="component.version.minor" value="0" />
+    <property name="java.version" value="1.8.0_25" />
+    <property name="user.timezone" value="Asia/Shanghai" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="build_lib" value="build/lib" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/endorsed" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="packagedir" value="com/topcoder/web/common/cache" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="/" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="52.0" />
+    <property name="build_testclassdir" value="build/testClasses" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre" />
+    <property name="component.distfilename" value="tc_cache" />
+    <property name="component.version.build" value="1" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="/Users/skyhit/sandbox/tc-cache/build.xml" />
+    <property name="os.version" value="10.11.3" />
+    <property name="build_distdir" value="build/dist" />
+    <property name="build_tcsdistdir" value="build/dist/tc_cache-1.0.0" />
+    <property name="path.separator" value=":" />
+    <property name="java.vm.version" value="25.25-b02" />
+    <property name="ant.library.dir" value="/Users/skyhit/apache-ant-1.9.4/lib" />
+    <property name="component.name" value="Topcoder Cache Client" />
+    <property name="javamain" value="src/java/main" />
+    <property name="dist_lib" value="build/dist/lib/tcs" />
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+    <property name="component" value="Topcoder Cache Client" />
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="user.home" value="/Users/skyhit" />
+    <property name="ant.file.Topcoder Cache client" value="/Users/skyhit/sandbox/tc-cache/build.xml" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="java.library.path" value="/Users/skyhit/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="gopherProxySet" value="false" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.9.4 compiled on April 29 2014" />
+    <property name="java.class.path" value="/Users/skyhit/sandbox/tc-cache/build/testClasses:/Users/skyhit/sandbox/tc-cache/test_files:/Users/skyhit/sandbox/tc-cache/libs/jboss-cache.jar:/Users/skyhit/sandbox/tc-cache/libs/security.jar:/Users/skyhit/sandbox/tc-cache/libs/jbossall-client.jar:/Users/skyhit/sandbox/tc-cache/libs/shared.jar:/Users/skyhit/sandbox/tc-cache/libs/jedis-2.8.1.jar:/Users/skyhit/sandbox/tc-cache/libs/commons-pool2-2.4.2.jar:/Users/skyhit/sandbox/tc-cache/libs/log4j-1.2.17.jar:/Users/skyhit/sandbox/tc-cache/build/classes:/Users/skyhit/sandbox/tc-cache/libs/test/commons-io-2.4.jar:/Users/skyhit/sandbox/tc-cache/libs/test/embedded-redis-0.6.jar:/Users/skyhit/sandbox/tc-cache/libs/test/guava-18.0.jar:/Users/skyhit/sandbox/tc-cache/libs/test/hamcrest-core-1.3.jar:/Users/skyhit/sandbox/tc-cache/libs/test/junit-4.12.jar:/Users/skyhit/apache-ant-1.9.4/lib/ant-launcher.jar:/Users/skyhit/apache-ant-1.9.4/lib/ant.jar:/Users/skyhit/apache-ant-1.9.4/lib/ant-junit.jar:/Users/skyhit/apache-ant-1.9.4/lib/ant-junit4.jar" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.topcoder.web.common.cache.redis.RedisCacheClientEmbeddedRedisTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter,/Users/skyhit/sandbox/tc-cache/log/TEST-com.topcoder.web.common.cache.redis.RedisCacheClientEmbeddedRedisTest.txt formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/skyhit/sandbox/tc-cache/log/TEST-com.topcoder.web.common.cache.redis.RedisCacheClientEmbeddedRedisTest.xml crashfile=/Users/skyhit/sandbox/tc-cache/junitvmwatcher7988930058278127917.properties propsfile=/Users/skyhit/sandbox/tc-cache/junit3312138399582217698.properties" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="builddir" value="build" />
+    <property name="ant.file.type" value="file" />
+    <property name="java.vm.specification.version" value="1.8" />
+    <property name="component.dist.jar" value="build/dist/tc_cache-1.0.0.jar" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="java.io.tmpdir" value="/var/folders/0s/_3szvc2d0370f6jqs16q27wh0000gn/T/" />
+    <property name="component.target" value="1.5" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="build_targetclassdir" value="build/targetclasses" />
+    <property name="javac.encoding" value="UTF-8" />
+    <property name="build_classdir" value="build/classes" />
+    <property name="javatests" value="src/java/tests" />
+    <property name="os.arch" value="x86_64" />
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+    <property name="java.ext.dirs" value="/Users/skyhit/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+    <property name="user.dir" value="/Users/skyhit/sandbox/tc-cache" />
+    <property name="javasrc" value="src/java" />
+    <property name="logdir" value="log" />
+    <property name="libdir" value="/Users/skyhit/sandbox/tc-cache/libs" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="distfilename" value="tc_cache" />
+    <property name="basedir" value="/Users/skyhit/sandbox/tc-cache" />
+    <property name="ant.java.version" value="1.8" />
+    <property name="ant.core.lib" value="/Users/skyhit/apache-ant-1.9.4/lib/ant.jar" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="component.jar" value="build/dist/lib/tcs/tc_cache/1.0.0/tc_cache.jar" />
+    <property name="java.specification.version" value="1.8" />
+    <property name="ant.file.type.Topcoder Cache client" value="file" />
+    <property name="ant.project.invoked-targets" value="testEmbeddedRedis" />
+    <property name="component.package" value="com.topcoder.web.common.cache" />
+  </properties>
+  <testcase classname="com.topcoder.web.common.cache.redis.RedisCacheClientEmbeddedRedisTest" name="test_StringKey_ObjectValue" time="0.25" />
+  <testcase classname="com.topcoder.web.common.cache.redis.RedisCacheClientEmbeddedRedisTest" name="test_clearCache" time="0.017" />
+  <testcase classname="com.topcoder.web.common.cache.redis.RedisCacheClientEmbeddedRedisTest" name="test_RequestAddressKey_withExpiration" time="2.01" />
+  <testcase classname="com.topcoder.web.common.cache.redis.RedisCacheClientEmbeddedRedisTest" name="test_RequestAddressKey_StringValue" time="0.006" />
+  <testcase classname="com.topcoder.web.common.cache.redis.RedisCacheClientEmbeddedRedisTest" name="test_TCSubjectAddressKey_withExpiration" time="2.011" />
+  <testcase classname="com.topcoder.web.common.cache.redis.RedisCacheClientEmbeddedRedisTest" name="test_RequestAddressKey_ObjectValue" time="0.007" />
+  <testcase classname="com.topcoder.web.common.cache.redis.RedisCacheClientEmbeddedRedisTest" name="test_TCSubjectAddressKey_StringValue" time="0.004" />
+  <testcase classname="com.topcoder.web.common.cache.redis.RedisCacheClientEmbeddedRedisTest" name="test_TCSubjectAddressKey_ObjectValue" time="0.005" />
+  <testcase classname="com.topcoder.web.common.cache.redis.RedisCacheClientEmbeddedRedisTest" name="test_StringKey_StringValue" time="0.004" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[log4j:WARN No appenders could be found for logger (com.topcoder.shared.util.TCResourceBundle).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+]]></system-err>
+</testsuite>

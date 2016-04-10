@@ -1,0 +1,17 @@
+Testsuite: com.topcoder.web.common.cache.redis.RedisCacheClientEmbeddedRedisTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.607 sec
+------------- Standard Error -----------------
+log4j:WARN No appenders could be found for logger (com.topcoder.shared.util.TCResourceBundle).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+------------- ---------------- ---------------
+
+Testcase: test_StringKey_ObjectValue took 0.248 sec
+Testcase: test_clearCache took 0.017 sec
+Testcase: test_RequestAddressKey_withExpiration took 2.01 sec
+Testcase: test_RequestAddressKey_StringValue took 0.006 sec
+Testcase: test_TCSubjectAddressKey_withExpiration took 2.011 sec
+Testcase: test_RequestAddressKey_ObjectValue took 0.007 sec
+Testcase: test_TCSubjectAddressKey_StringValue took 0.004 sec
+Testcase: test_TCSubjectAddressKey_ObjectValue took 0.004 sec
+Testcase: test_StringKey_StringValue took 0.004 sec
