@@ -50,12 +50,15 @@ public class RedisCacheClient implements CacheClient {
     /**
      * The JedisPool instance to obtain the connection to Redis.
      */
-    private final JedisPool jedisPool;
+    private static JedisPool jedisPool;
     
     /**
      * The constructor to initialize the Jedis.    
      */
     public RedisCacheClient() {
+    }
+    
+    static {
         // init pool config
         JedisPoolConfig config = new JedisPoolConfig();
         
